@@ -1,0 +1,16 @@
+{
+  "name": "continent-of-god",
+  "version": "1.0.0",
+  "description": "The Continent of God — Bible study curriculum generator (Jim Yarborough / NetPraise). Builds PowerPoint, teaching script, and YouTube/SEO files for all 66 books.",
+  "scripts": {
+    "build": "node generate.js",
+    "build:genesis": "node generate.js Genesis"
+  },
+  "author": "Jim Yarborough — The Continent of God · NetPraise",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "docx": "^9.7.1",
+    "pptxgenjs": "^4.0.1"
+  }
+}

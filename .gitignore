@@ -1,0 +1,7 @@
+node_modules/
+.kjv-cache/
+
+# Generated curriculum output is large (~102MB for all 66 books) and is
+# regenerated with `node generate.js`. Keep only the Genesis sample in git.
+/ContinentOfGod/*
+!/ContinentOfGod/Genesis/

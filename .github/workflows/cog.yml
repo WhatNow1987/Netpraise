@@ -1,0 +1,32 @@
+name: Build Continent of God Curriculum
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ "**" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build curriculum
+        run: npm run build
+
+      - name: Upload curriculum artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ContinentOfGod
+          path: ContinentOfGod/
+          if-no-files-found: error
